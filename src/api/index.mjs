@@ -9,8 +9,18 @@ const app = express()
 const port = 4000
 
 app.get('/api/feed', (req, res) => {
-  getStories(function(stories){
-    res.send({ stories })
+  const userName = req.query.username
+
+  if (!userName) {
+    res.status(400).json({ error: 'username is required' })
+  }
+
+  getStories(userName)
+  .then((stories) => {
+    res.json({ stories })
+  })
+  .catch((err) => {
+    res.status(400).json({ error: err.message })
   })
 })
 

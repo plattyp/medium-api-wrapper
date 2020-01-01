@@ -1,14 +1,22 @@
 import Feed from 'rss-to-json'
 
-export function getStories(callback) {
-  Feed.load('https://medium.com/feed/@plattyp', function(err, rss){
-    if (err) {
-      return callback(err)
+export function getStories(userName) {
+  const promise = new Promise((resolve, reject) => {
+    try {
+      Feed.load('https://medium.com/feed/@' + userName, function(err, rss){
+        if (err) {
+          return reject(err)
+        }
+    
+        const stories = transformStories(rss)
+        return resolve(stories)
+      })
     }
-
-    const stories = transformStories(rss)
-    return callback(stories)
-  })
+    catch(e) {
+      return reject(e)
+    }
+  });
+  return promise
 }
 
 function transformStories(rssResponse) {

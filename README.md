@@ -12,7 +12,9 @@ This wraps the medium RSS feed and returns JSON back of the stories for a given 
 
   yarn install
 
-### `yarn start`
+## Commands
+
+`yarn start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:4000](http://localhost:4000) to view it in the browser.

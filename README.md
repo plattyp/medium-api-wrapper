@@ -1,4 +1,4 @@
-Simple Medium API Wrapper
+# Simple Medium API Wrapper
 
 ## What is this?
 

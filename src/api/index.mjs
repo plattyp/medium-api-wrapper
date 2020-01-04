@@ -13,14 +13,17 @@ app.get('/api/feed', (req, res) => {
 
   if (!userName) {
     res.status(400).json({ error: 'username is required' })
+    return
   }
 
   getStories(userName)
   .then((stories) => {
     res.json({ stories })
+    return
   })
   .catch((err) => {
     res.status(400).json({ error: err.message })
+    return
   })
 })
 

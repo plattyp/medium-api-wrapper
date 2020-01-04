@@ -6,7 +6,7 @@ This wraps the medium RSS feed and returns JSON back of the stories for a given 
 
 ## Demo
 
-  - https://medium-api.plattyp.now.sh/api/feed?username=plattyp
+  - https://medium-api.now.sh/api/feed?username=plattyp
 
 ## Prerequeisites
 

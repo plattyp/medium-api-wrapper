@@ -2,7 +2,11 @@
 
 ## What is this?
 
-This wraps the medium RSS feed and returns JSON back of the stories for a given user
+This wraps the medium RSS feed and returns JSON back of the stories for a given medium username. This only returns the first page of stories for the given user.
+
+## Demo
+
+  - https://medium-api.plattyp.now.sh/api/feed?username=plattyp
 
 ## Prerequeisites
 
@@ -14,7 +18,7 @@ This wraps the medium RSS feed and returns JSON back of the stories for a given 
 
 ## Commands
 
-`yarn start`
+  yarn start
 
 Runs the app in the development mode.<br>
 Open [http://localhost:4000](http://localhost:4000) to view it in the browser.

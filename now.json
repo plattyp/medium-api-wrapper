@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    { 
+      "src": "src/api/index.mjs",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/feed",
+      "dest": "src/api/index.mjs",
+      "methods": ["GET"]
+    }
+  ]
+}
